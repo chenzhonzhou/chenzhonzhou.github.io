@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-10-22T12:21:01.351Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 创建文章、标签、分类</title>
+    <link href="http://yoursite.com/2019/10/22/hexo-chuang-jian-wen-zhang-biao-qian-fen-lei/"/>
+    <id>http://yoursite.com/2019/10/22/hexo-chuang-jian-wen-zhang-biao-qian-fen-lei/</id>
+    <published>2019-10-22T11:53:15.000Z</published>
+    <updated>2019-10-22T12:21:01.351Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、创建文章"><a href="#1、创建文章" class="headerlink" title="1、创建文章"></a>1、创建文章</h3><h5 id="1-1在hexo下创建一个新的文章"><a href="#1-1在hexo下创建一个新的文章" class="headerlink" title="1.1在hexo下创建一个新的文章"></a>1.1在hexo下创建一个新的文章</h5><pre><code> hexo new &quot;文章名称&quot; </code></pre><p> 生成后会提示你文件路径，一般在hexo/source/_posts下 </p><h5 id="1-2文章基本设置"><a href="#1-2文章基本设置" class="headerlink" title="1.2文章基本设置"></a>1.2文章基本设置</h5><pre><code>---title: yum安装dockerdate: 2019-10-22 19:01:24comments: true #是否可评论toc: true #是否显示文章目录categories: &quot;云服务器&quot; #分类tags:   #标签    - docker    - yum---</code></pre><h3 id="2、创建标签"><a href="#2、创建标签" class="headerlink" title="2、创建标签"></a>2、创建标签</h3><h5 id="2-1创建标签页面"><a href="#2-1创建标签页面" class="headerlink" title="2.1创建标签页面"></a>2.1创建标签页面</h5><pre><code>hexo new page tags</code></pre><h5 id="2-2基本设置"><a href="#2-2基本设置" class="headerlink" title="2.2基本设置"></a>2.2基本设置</h5><p>source/tags目录下index.md文件</p><pre><code>title: tagsdate: 2019-10-22 19:03:11type: &quot;tags&quot;layout: &quot;tags&quot;</code></pre><h3 id="3、创建分类"><a href="#3、创建分类" class="headerlink" title="3、创建分类"></a>3、创建分类</h3><h5 id="3-1创建分类页面"><a href="#3-1创建分类页面" class="headerlink" title="3.1创建分类页面"></a>3.1创建分类页面</h5><pre><code>hexo new page categories</code></pre><h5 id="3-2基本设置"><a href="#3-2基本设置" class="headerlink" title="3.2基本设置"></a>3.2基本设置</h5><p>source/categories目录下index.md文件</p><pre><code>title: categoriesdate: 2019-10-22 19:07:45type: &quot;categories&quot;layout: &quot;categories&quot;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1、创建文章&quot;&gt;&lt;a href=&quot;#1、创建文章&quot; class=&quot;headerlink&quot; title=&quot;1、创建文章&quot;&gt;&lt;/a&gt;1、创建文章&lt;/h3&gt;&lt;h5 id=&quot;1-1在hexo下创建一个新的文章&quot;&gt;&lt;a href=&quot;#1-1在hexo下创建一个新的文章&quot; c
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yum 安装docker</title>
+    <link href="http://yoursite.com/2018/09/01/yum-an-zhuang-docker/"/>
+    <id>http://yoursite.com/2018/09/01/yum-an-zhuang-docker/</id>
+    <published>2018-09-01T03:05:15.000Z</published>
+    <updated>2019-10-22T12:22:40.197Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装docker-1-13-0"><a href="#安装docker-1-13-0" class="headerlink" title="安装docker 1.13.0"></a>安装docker 1.13.0</h3><h5 id="1-安装yum源"><a href="#1-安装yum源" class="headerlink" title="1.安装yum源"></a>1.安装yum源</h5><pre><code>curl -f sSL https://get.docker.com/ | sh -s -- --mirror AzureChinaCloud</code></pre><p>或：</p><pre><code>wget https://docs.docker.com/v1.13/engine/installation/linux/repo_files/centos/docker.repo</code></pre><h5 id="2-安装最新版的docker"><a href="#2-安装最新版的docker" class="headerlink" title="2.安装最新版的docker"></a>2.安装最新版的docker</h5><pre><code>yum makecache fastyum -y install docker-engine</code></pre><p>或者安装其他版本docker</p><pre><code>yum list docker-engine.x86_64  --showduplicates |sort -ryum -y install docker-engine-&lt;VERSION_STRING&gt;</code></pre><h5 id="3-把当前用户加入docker用户组"><a href="#3-把当前用户加入docker用户组" class="headerlink" title="3.把当前用户加入docker用户组"></a>3.把当前用户加入docker用户组</h5><pre><code>sudo groupadd dockersudo usermod -aG docker $USER</code></pre><h3 id="yum-安装docker-1-26"><a href="#yum-安装docker-1-26" class="headerlink" title="yum 安装docker 1.26"></a>yum 安装docker 1.26</h3><h5 id="1-配置docker-yum-源"><a href="#1-配置docker-yum-源" class="headerlink" title="1.配置docker yum 源"></a>1.配置docker yum 源</h5><pre><code>cat &gt; /etc/yum.repos.d/docker.repo &lt;&lt;-EOF[dockerrepo]name=Docker Repositorybaseurl=https://yum.dockerproject.org/repo/experimental/centos/7/enabled=1gpgcheck=1gpgkey=https://yum.dockerproject.org/gpgEOF</code></pre><h5 id="2-安装组件"><a href="#2-安装组件" class="headerlink" title="2.安装组件"></a>2.安装组件</h5><pre><code>yum -y install docker-enginecurl -fsSL https://get.docker.com/ | sh 或者 wget -qO- https://get.docker.com/ |sh</code></pre><h5 id="3-启动"><a href="#3-启动" class="headerlink" title="3.启动"></a>3.启动</h5><p>systemctl start docker 启动 docker<br>systemctl enable docker 设置开机启动</p><h5 id="4-docker-compose环境安装"><a href="#4-docker-compose环境安装" class="headerlink" title="4.docker-compose环境安装"></a>4.docker-compose环境安装</h5><pre><code>yum install python-pip -ypip install docker-composedocker-compose -version</code></pre><p> 下载二进制可执行文件的方式安装Docker-compose(推荐)</p><pre><code>curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-composechmod +x /usr/local/bin/docker-compose</code></pre><h5 id="5-docker加速（链接为阿里云docker镜像仓库，登录即可领取属于你的加速地址）"><a href="#5-docker加速（链接为阿里云docker镜像仓库，登录即可领取属于你的加速地址）" class="headerlink" title="5.docker加速（链接为阿里云docker镜像仓库，登录即可领取属于你的加速地址）"></a>5.docker加速（链接为阿里云docker镜像仓库，登录即可领取属于你的加速地址）</h5><p><a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fcr.console.aliyun.com%2F&amp;lang=zh#/accelerator" target="_blank" rel="noopener">https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fcr.console.aliyun.com%2F&amp;lang=zh#/accelerator</a></p><pre><code>vim /etc/docker/daemon.json{  &quot;registry-mirrors&quot;: [&quot;https://av7k0o0o.mirror.aliyuncs.com&quot;]}</code></pre><h5 id="6-harbor-删除镜像及资源回收"><a href="#6-harbor-删除镜像及资源回收" class="headerlink" title="6.harbor 删除镜像及资源回收"></a>6.harbor 删除镜像及资源回收</h5><pre><code>$ docker-compose stop$ docker run -it --name gc --rm --volumes-from deploy_registry_1 registry:2.5.0 garbage-collect --dry-run /etc/registry/config.yml$ docker-compose start</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;安装docker-1-13-0&quot;&gt;&lt;a href=&quot;#安装docker-1-13-0&quot; class=&quot;headerlink&quot; title=&quot;安装docker 1.13.0&quot;&gt;&lt;/a&gt;安装docker 1.13.0&lt;/h3&gt;&lt;h5 id=&quot;1-安装yum源&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mm_wiki部署企业文档平台</title>
+    <link href="http://yoursite.com/2018/08/10/mm-wiki-bu-shu-qi-ye-wen-dang-ping-tai/"/>
+    <id>http://yoursite.com/2018/08/10/mm-wiki-bu-shu-qi-ye-wen-dang-ping-tai/</id>
+    <published>2018-08-10T07:13:45.000Z</published>
+    <updated>2019-10-22T12:21:59.499Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>github地址：</strong></p><p><a href="https://github.com/phachon/mm-wiki" target="_blank" rel="noopener">https://github.com/phachon/mm-wiki</a></p><p>github项目上安装非常简单，不做介绍</p><p>修改分享文档最下方显示公司版权，修改 ./views/page/display.html 文件。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;github地址：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/phachon/mm-wiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/phachon/
+      
+    
+    </summary>
+    
+    
+      <category term="wiki" scheme="http://yoursite.com/categories/wiki/"/>
+    
+    
+      <category term="wiki" scheme="http://yoursite.com/tags/wiki/"/>
+    
+  </entry>
+  
+</feed>
