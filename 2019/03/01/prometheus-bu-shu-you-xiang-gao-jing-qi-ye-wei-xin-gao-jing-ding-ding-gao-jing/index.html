@@ -1,0 +1,173 @@
+<!-- build time:Wed Oct 23 2019 16:25:15 GMT+0800 (GMT+08:00) --><!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script><link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet"><script></script><meta name="theme-color" content="#222"><style>.pace .pace-progress{background:#1E92FB;height:3px}.pace .pace-progress-inner{box-shadow:0 0 10px #1E92FB,0 0 5px #1E92FB}.pace .pace-activity{border-top-color:#1E92FB;border-left-color:#1E92FB}</style><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="prometheus,监控系统,"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml"><meta name="description" content="Prometheus部署+邮箱告警+企业微信告警+钉钉告警1 部署Prometheus server1.1 下载二进制包$ wget https:&#x2F;&#x2F;github.com&#x2F;prometheus&#x2F;prometheus&#x2F;releases&#x2F;download&#x2F;v2.12.0&#x2F;prometheus-2.12.0.linux-amd64.tar.gz1.2 解压并move至&#x2F;work&#x2F;admin目录下$ wg"><meta name="keywords" content="prometheus,监控系统"><meta property="og:type" content="article"><meta property="og:title" content="Prometheus部署+邮箱告警+企业微信告警+钉钉告警"><meta property="og:url" content="http:&#x2F;&#x2F;chenzhonzhou.github.io&#x2F;2019&#x2F;03&#x2F;01&#x2F;prometheus-bu-shu-you-xiang-gao-jing-qi-ye-wei-xin-gao-jing-ding-ding-gao-jing&#x2F;index.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="Prometheus部署+邮箱告警+企业微信告警+钉钉告警1 部署Prometheus server1.1 下载二进制包$ wget https:&#x2F;&#x2F;github.com&#x2F;prometheus&#x2F;prometheus&#x2F;releases&#x2F;download&#x2F;v2.12.0&#x2F;prometheus-2.12.0.linux-amd64.tar.gz1.2 解压并move至&#x2F;work&#x2F;admin目录下$ wg"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2019-10-23T04:57:38.480Z"><meta name="twitter:card" content="summary"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"5.1.4",sidebar:{position:"left",display:"always",offset:12,b2t:!0,scrollpercent:!0,onmobile:!0},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://chenzhonzhou.github.io/2019/03/01/prometheus-bu-shu-you-xiang-gao-jing-qi-ye-wei-xin-gao-jing-ding-ding-gao-jing/"><title>Prometheus部署+邮箱告警+企业微信告警+钉钉告警 | Hexo</title><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">Hexo</span> <span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/%20" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-about"><a href="/about/%20" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags%20" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives%20" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/%20" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li></ul></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://chenzhonzhou.github.io/2019/03/01/prometheus-bu-shu-you-xiang-gao-jing-qi-ye-wei-xin-gao-jing-ding-ding-gao-jing/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="Zhongzhou Chen"><meta itemprop="description" content=""><meta itemprop="image" content="/images/chen.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Hexo"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Prometheus部署+邮箱告警+企业微信告警+钉钉告警</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T14:05:15+08:00">2019-03-01 </time></span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">监控系统</span> </a></span>， <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/prometheus/" itemprop="url" rel="index"><span itemprop="name">prometheus</span></a></span></span></div></header><div class="post-body" itemprop="articleBody"><h1 id="Prometheus部署-邮箱告警-企业微信告警-钉钉告警"><a href="#Prometheus部署-邮箱告警-企业微信告警-钉钉告警" class="headerlink" title="Prometheus部署+邮箱告警+企业微信告警+钉钉告警"></a>Prometheus部署+邮箱告警+企业微信告警+钉钉告警</h1><h5 id="1-部署Prometheus-server"><a href="#1-部署Prometheus-server" class="headerlink" title="1 部署Prometheus server"></a>1 部署Prometheus server</h5><h6 id="1-1-下载二进制包"><a href="#1-1-下载二进制包" class="headerlink" title="1.1 下载二进制包"></a>1.1 下载二进制包</h6><pre class="language-ruby">$ wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz</pre><h6 id="1-2-解压并move至-work-admin目录下"><a href="#1-2-解压并move至-work-admin目录下" class="headerlink" title="1.2 解压并move至/work/admin目录下"></a>1.2 解压并move至/work/admin目录下</h6><pre><code class="ruby"><code class="language-ruby">$ wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz</code></code></pre><h6 id="1-2-解压并move至-work-admin目录下"><a href="#1-2-解压并move至-work-admin目录下" class="headerlink" title="1.2 解压并move至/work/admin目录下"></a>1.2 解压并move至/work/admin目录下</h6><pre><code class="ruby">$ tar zcvf prometheus-2.7.1.linux-amd64.tar.gz
+
+$ mv prometheus-2.7.1.linux-amd64 /work/admin/prometheus</code></pre><h6 id="1-3-配置并启动"><a href="#1-3-配置并启动" class="headerlink" title="1.3 配置并启动"></a>1.3 配置并启动</h6><pre class="language-bash"><code class="language-bash">$ <span class="token function">cat</span> prometheus.yml
+
+global:
+
+  scrape_interval:    15s <span class="token comment" spellcheck="true"># 默认抓取间隔, 15秒向目标抓取一次数据。</span>
+
+  evaluation_interval: 15s <span class="token comment" spellcheck="true"># Evaluate rules every 15 seconds. The default is every 1 minute.</span>
+
+  <span class="token comment" spellcheck="true"># scrape_timeout is set to the global default (10s).</span>
+
+<span class="token comment" spellcheck="true"># Alertmanager configuration</span>
+
+alerting:
+
+  alertmanagers:
+
+  - static_configs:
+
+    - targets:
+
+      - <span class="token string">"localhost:9093"</span>
+
+      <span class="token comment" spellcheck="true"># - alertmanager:9093</span>
+
+<span class="token comment" spellcheck="true"># Load rules once and periodically evaluate them according to the global 'evaluation_interval'.</span>
+
+rule_files:
+
+  - <span class="token string">"/usr/local/prometheus/rules/mysql*.rules"</span>
+
+  <span class="token comment" spellcheck="true"># - "first_rules.yml"</span>
+
+  <span class="token comment" spellcheck="true"># - "second_rules.yml"</span>
+
+<span class="token comment" spellcheck="true"># A scrape configuration containing exactly one endpoint to scrape:</span>
+
+<span class="token comment" spellcheck="true"># Here it's Prometheus itself.</span>
+
+scrape_configs:
+
+  <span class="token comment" spellcheck="true"># The job name is added as a label `job=&lt;job_name>` to any timeseries scraped from this config.</span>
+
+  - job_name: <span class="token string">'prometheus'</span>
+
+    <span class="token comment" spellcheck="true"># metrics_path defaults to '/metrics'</span>
+
+    <span class="token comment" spellcheck="true"># scheme defaults to 'http'.</span>
+
+    static_configs:
+
+    - targets: <span class="token punctuation">[</span><span class="token string">'localhost:9090'</span><span class="token punctuation">]</span>
+
+  - job_name: <span class="token string">'linux'</span>
+
+    static_configs:
+
+    - targets: <span class="token punctuation">[</span><span class="token string">'localhost:9101'</span><span class="token punctuation">]</span>
+
+      labels:
+
+        instance: node1
+
+
+
+  - job_name: <span class="token string">'mysql'</span>
+
+    static_configs:
+
+    - targets: <span class="token punctuation">[</span><span class="token string">'192.168.1.11:9104'</span><span class="token punctuation">]</span>
+
+      labels:
+
+        instance: db1
+
+$ /usr/local/prometheus/prometheus --config.file<span class="token operator">=</span>/usr/local/prometheus/prometheus.yml --storage.tsdb.path<span class="token operator">=</span>/var/lib/prometheus</code></pre><h5 id="2-部署node-exporter"><a href="#2-部署node-exporter" class="headerlink" title="2 部署node_exporter"></a>2 部署node_exporter</h5><h6 id="2-1-下载二进制包"><a href="#2-1-下载二进制包" class="headerlink" title="2.1 下载二进制包"></a>2.1 下载二进制包</h6><pre class="language-ruby">$ wget https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz</pre><h6 id="2-2-解压并move至-usr-local-prometheus目录下"><a href="#2-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="2.2 解压并move至/usr/local/prometheus目录下"></a>2.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby"><code class="language-ruby">$ wget https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz</code></code></pre><h6 id="2-2-解压并move至-usr-local-prometheus目录下"><a href="#2-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="2.2 解压并move至/usr/local/prometheus目录下"></a>2.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby">$ tar zcvf node_exporter-0.17.0.linux-amd64.tar.gz
+
+$ mv node_exporter-0.17.0.linux-amd64 /usr/local/prometheus/node_exporter</code></pre><h6 id="2-3-启动"><a href="#2-3-启动" class="headerlink" title="2.3 启动"></a>2.3 启动</h6><pre class="language-bash">$ /usr/local/prometheus/node_exporter/node_exporter --web.listen-address=:9100</pre><h5 id="3-部署mysqld-exporter"><a href="#3-部署mysqld-exporter" class="headerlink" title="3 部署mysqld_exporter"></a>3 部署mysqld_exporter</h5><h6 id="3-1-下载二进制包"><a href="#3-1-下载二进制包" class="headerlink" title="3.1 下载二进制包"></a>3.1 下载二进制包</h6><pre><code class="ruby">$ wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.11.0/mysqld_exporter-0.11.0.linux-amd64.tar.gz</code></pre><h6 id="3-2-解压并move至-usr-local-prometheus目录下"><a href="#3-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="3.2 解压并move至/usr/local/prometheus目录下"></a>3.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby"><code class="language-bash">$ /usr/local/prometheus/node_exporter/node_exporter --web.listen-address=:9100</code></code></pre><h5 id="3-部署mysqld-exporter"><a href="#3-部署mysqld-exporter" class="headerlink" title="3 部署mysqld_exporter"></a>3 部署mysqld_exporter</h5><h6 id="3-1-下载二进制包"><a href="#3-1-下载二进制包" class="headerlink" title="3.1 下载二进制包"></a>3.1 下载二进制包</h6><pre><code class="ruby">$ wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.11.0/mysqld_exporter-0.11.0.linux-amd64.tar.gz</code></pre><h6 id="3-2-解压并move至-usr-local-prometheus目录下"><a href="#3-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="3.2 解压并move至/usr/local/prometheus目录下"></a>3.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby">$ tar zcvf mysqld_exporter-0.11.0.linux-amd64.tar.gz
+
+$ mv mysqld_exporter-0.11.0.linux-amd64 /usr/local/prometheus/mysqld_exporter</code></pre><h6 id="3-3-为mysqld-exporter配置MySQL用户并授权，启动"><a href="#3-3-为mysqld-exporter配置MySQL用户并授权，启动" class="headerlink" title="3.3 为mysqld_exporter配置MySQL用户并授权，启动"></a>3.3 为mysqld_exporter配置MySQL用户并授权，启动</h6><pre class="language-ruby"><code class="language-ruby">$ cat <span class="token punctuation">.</span>my<span class="token punctuation">.</span>cnf
+
+<span class="token punctuation">[</span>client<span class="token punctuation">]</span>
+
+user<span class="token operator">=</span>mysqld_exporter
+
+password<span class="token operator">=</span><span class="token number">000000</span>
+
+$ <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>prometheus<span class="token operator">/</span>mysqld_exporter<span class="token operator">/</span>mysqld_exporter <span class="token operator">--</span>config<span class="token punctuation">.</span>my<span class="token operator">-</span>cnf<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>prometheus<span class="token regex">/mysqld_exporter/</span><span class="token punctuation">.</span>my<span class="token punctuation">.</span>cnf</code></pre><h5 id="4-部署alertmanager"><a href="#4-部署alertmanager" class="headerlink" title="4 部署alertmanager"></a>4 部署alertmanager</h5><h6 id="4-1-下载二进制包"><a href="#4-1-下载二进制包" class="headerlink" title="4.1 下载二进制包"></a>4.1 下载二进制包</h6><pre class="language-ruby">$ wget https://github.com/prometheus/alertmanager/releases/download/v0.16.1/alertmanager-0.16.1.linux-amd64.tar.gz</pre><h6 id="4-2-解压并move至-usr-local-prometheus目录下"><a href="#4-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="4.2 解压并move至/usr/local/prometheus目录下"></a>4.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby"><code class="language-ruby">$ wget https://github.com/prometheus/alertmanager/releases/download/v0.16.1/alertmanager-0.16.1.linux-amd64.tar.gz</code></code></pre><h6 id="4-2-解压并move至-usr-local-prometheus目录下"><a href="#4-2-解压并move至-usr-local-prometheus目录下" class="headerlink" title="4.2 解压并move至/usr/local/prometheus目录下"></a>4.2 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby">$ tar zcvf alertmanager-0.16.1.linux-amd64.tar.gz
+
+$ mv alertmanager-0.16.1.linux-amd64 /usr/local/prometheus/alertmanager</code></pre><h6 id="4-3-修改配置文件并启动"><a href="#4-3-修改配置文件并启动" class="headerlink" title="4.3 修改配置文件并启动"></a>4.3 修改配置文件并启动</h6><pre class="language-bash"><code class="language-bash">$ <span class="token function">cat</span> alertmanager.yml
+
+global:
+
+  resolve_timeout: 5m
+
+  smtp_smarthost: <span class="token string">'smtp.163.com:25'</span> <span class="token comment" spellcheck="true"># 邮箱smtp服务器代理</span>
+
+  smtp_from: <span class="token string">'XXXXXX@163.com'</span> <span class="token comment" spellcheck="true"># 发送邮箱名称</span>
+
+  smtp_auth_username: <span class="token string">'XXXXX@163.com'</span> <span class="token comment" spellcheck="true"># 邮箱名称</span>
+
+  smtp_auth_password: <span class="token string">'XXXXXXXX'</span> <span class="token comment" spellcheck="true"># 邮箱密码或授权码</span>
+
+templates:
+
+  - <span class="token string">'template/*.tmpl'</span>
+
+route:
+
+  group_by: <span class="token punctuation">[</span><span class="token string">'alertname'</span><span class="token punctuation">]</span>
+
+  group_wait: 10s
+
+  group_interval: 10s
+
+  repeat_interval: 24h
+
+  receiver: <span class="token string">'ops_dingding'</span>
+
+receivers:
+
+  - name: <span class="token string">'email'</span>
+
+    email_configs:
+
+    - to: <span class="token string">'XXXXX@163.com'</span>  <span class="token comment" spellcheck="true"># 接收警报的email配置</span>
+
+      html: <span class="token string">'{{ template "test.html" . }}'</span> <span class="token comment" spellcheck="true"># 设定邮箱的内容模板</span>
+
+      headers: <span class="token punctuation">{</span> Subject: <span class="token string">"[WARN] 报警邮件"</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true"># 接收邮件的标题</span>
+
+  - name: <span class="token string">'wechat'</span>
+
+    wechat_configs:
+
+    - corp_id: <span class="token string">'XXXXX'</span>
+
+      to_party: <span class="token string">'1'</span>
+
+      agent_id: <span class="token string">'1000002'</span>
+
+      api_secret: <span class="token string">'XXXXX'</span>
+
+  - name: <span class="token string">'ops_dingding'</span>
+
+    webhook_configs:
+
+    - url: <span class="token string">'http://localhost:8060/dingtalk/ops_dingding/send'</span>
+
+inhibit_rules:
+
+  - source_match:
+
+      severity: <span class="token string">'critical'</span>
+
+    target_match:
+
+      severity: <span class="token string">'warning'</span>
+
+    equal: <span class="token punctuation">[</span><span class="token string">'alertname'</span>, <span class="token string">'dev'</span>, <span class="token string">'instance'</span><span class="token punctuation">]</span>
+
+$ /usr/local/prometheus/alertmanager/alertmanager --config.file<span class="token operator">=</span>/usr/local/prometheus/alertmanager/alertmanager.yml</code></pre><h5 id="5-prometheus通过webhook推送告警至钉钉"><a href="#5-prometheus通过webhook推送告警至钉钉" class="headerlink" title="5 prometheus通过webhook推送告警至钉钉"></a>5 prometheus通过webhook推送告警至钉钉</h5><h6 id="5-1-添加钉钉机器人，获取webhook"><a href="#5-1-添加钉钉机器人，获取webhook" class="headerlink" title="5.1 添加钉钉机器人，获取webhook"></a>5.1 添加钉钉机器人，获取webhook</h6><p>参考 <a href="https://open-doc.dingtalk.com/docs/doc.htm?treeId=257&amp;articleId=105735&amp;docType=1" target="_blank" rel="noopener">https://open-doc.dingtalk.com/docs/doc.htm?treeId=257&amp;articleId=105735&amp;docType=1</a></p><h6 id="5-2-下载插件（二进制文件）"><a href="#5-2-下载插件（二进制文件）" class="headerlink" title="5.2 下载插件（二进制文件）"></a>5.2 下载插件（二进制文件）</h6><pre class="language-ruby">$ wget https://github.com/timonwong/prometheus-webhook-dingtalk/releases/download/v0.3.0/prometheus-webhook-dingtalk-0.3.0.linux-amd64.tar.gz</pre><h6 id="5-3-解压并move至-usr-local-prometheus目录下"><a href="#5-3-解压并move至-usr-local-prometheus目录下" class="headerlink" title="5.3 解压并move至/usr/local/prometheus目录下"></a>5.3 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby"><code class="language-ruby">$ wget https://github.com/timonwong/prometheus-webhook-dingtalk/releases/download/v0.3.0/prometheus-webhook-dingtalk-0.3.0.linux-amd64.tar.gz</code></code></pre><h6 id="5-3-解压并move至-usr-local-prometheus目录下"><a href="#5-3-解压并move至-usr-local-prometheus目录下" class="headerlink" title="5.3 解压并move至/usr/local/prometheus目录下"></a>5.3 解压并move至/usr/local/prometheus目录下</h6><pre><code class="ruby">$ tar zxvf prometheus-webhook-dingtalk-0.3.0.linux-amd64.tar.gz
+
+$ mv prometheus-webhook-dingtalk-0.3.0.linux-amd64/prometheus-webhook-dingtalk /usr/local/prometheus/alertmanager</code></pre><h6 id="5-4-编辑启动脚本（请替换为自己的webhook-URL-及-ding-profile）"><a href="#5-4-编辑启动脚本（请替换为自己的webhook-URL-及-ding-profile）" class="headerlink" title="5.4 编辑启动脚本（请替换为自己的webhook URL 及 ding.profile）"></a>5.4 编辑启动脚本（请替换为自己的webhook URL 及 ding.profile）</h6><pre class="language-bash"><code class="language-bash">$ <span class="token function">cat</span> dingding_start.sh
+
+<span class="token function">nohup</span> /usr/local/prometheus/alertmanager/prometheus-webhook-dingtalk --ding.profile<span class="token operator">=</span><span class="token string">"ops_dingding=https://oapi.dingtalk.com/robot/send?access_token=XXXXXXX"</span>  2<span class="token operator">></span><span class="token operator">&amp;</span>1 1<span class="token operator">></span>/usr/local/prometheus/alertmanager/dingding.log <span class="token operator">&amp;</span>
+
+$ sh dingding_start.sh</code></pre><h6 id="5-5-编辑alertmanager-yml，增加web-hook配置并重启alertmanager"><a href="#5-5-编辑alertmanager-yml，增加web-hook配置并重启alertmanager" class="headerlink" title="5.5 编辑alertmanager.yml，增加web_hook配置并重启alertmanager"></a>5.5 编辑alertmanager.yml，增加web_hook配置并重启alertmanager</h6><pre class="language-bash"><code class="language-bash">  - name: <span class="token string">'ops_dingding'</span>
+
+    webhook_configs:
+
+    - url: <span class="token string">'http://localhost:8060/dingtalk/ops_dingding/send'</span></code></pre></div><div><div><div style="text-align:center;color:#ccc;font-size:14px">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div></div></div><div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/prometheus/" rel="tag"><i class="fa fa-tag"></i> prometheus</a> <a href="/tags/%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 监控系统</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2018/09/05/docker-jing-xiang-rong-qi-guan-li/" rel="next" title="docker镜像、容器管理"><i class="fa fa-chevron-left"></i> docker镜像、容器管理</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/2019/10/22/hexo-chuang-jian-wen-zhang-biao-qian-fen-lei/" rel="prev" title="hexo 创建文章、标签、分类">hexo 创建文章、标签、分类 <i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/chen.png" alt="Zhongzhou Chen"><p class="site-author-name" itemprop="name">Zhongzhou Chen</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives%20%7C%7C%20archive"><span class="site-state-item-count">5</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/index.html"><span class="site-state-item-count">5</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">5</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Prometheus部署-邮箱告警-企业微信告警-钉钉告警"><span class="nav-text">Prometheus部署+邮箱告警+企业微信告警+钉钉告警</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-部署Prometheus-server"><span class="nav-text">1 部署Prometheus server</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-1-下载二进制包"><span class="nav-text">1.1 下载二进制包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-解压并move至-work-admin目录下"><span class="nav-text">1.2 解压并move至/work/admin目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-2-解压并move至-work-admin目录下"><span class="nav-text">1.2 解压并move至/work/admin目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-3-配置并启动"><span class="nav-text">1.3 配置并启动</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-部署node-exporter"><span class="nav-text">2 部署node_exporter</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-下载二进制包"><span class="nav-text">2.1 下载二进制包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">2.2 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">2.2 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-启动"><span class="nav-text">2.3 启动</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-部署mysqld-exporter"><span class="nav-text">3 部署mysqld_exporter</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-下载二进制包"><span class="nav-text">3.1 下载二进制包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">3.2 解压并move至/usr/local/prometheus目录下</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-部署mysqld-exporter"><span class="nav-text">3 部署mysqld_exporter</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-下载二进制包"><span class="nav-text">3.1 下载二进制包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">3.2 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-3-为mysqld-exporter配置MySQL用户并授权，启动"><span class="nav-text">3.3 为mysqld_exporter配置MySQL用户并授权，启动</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-部署alertmanager"><span class="nav-text">4 部署alertmanager</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#4-1-下载二进制包"><span class="nav-text">4.1 下载二进制包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">4.2 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-2-解压并move至-usr-local-prometheus目录下"><span class="nav-text">4.2 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-3-修改配置文件并启动"><span class="nav-text">4.3 修改配置文件并启动</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-prometheus通过webhook推送告警至钉钉"><span class="nav-text">5 prometheus通过webhook推送告警至钉钉</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#5-1-添加钉钉机器人，获取webhook"><span class="nav-text">5.1 添加钉钉机器人，获取webhook</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-2-下载插件（二进制文件）"><span class="nav-text">5.2 下载插件（二进制文件）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-3-解压并move至-usr-local-prometheus目录下"><span class="nav-text">5.3 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-3-解压并move至-usr-local-prometheus目录下"><span class="nav-text">5.3 解压并move至/usr/local/prometheus目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-4-编辑启动脚本（请替换为自己的webhook-URL-及-ding-profile）"><span class="nav-text">5.4 编辑启动脚本（请替换为自己的webhook URL 及 ding.profile）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-5-编辑alertmanager-yml，增加web-hook配置并重启alertmanager"><span class="nav-text">5.5 编辑alertmanager.yml，增加web_hook配置并重启alertmanager</span></a></li></ol></li></ol></li></ol></div></div></section><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span> <span class="with-love"><i class="fa fa-user"></i> </span><span class="author" itemprop="copyrightHolder">Zhongzhou Chen</span></div><span class="post-meta-divider"></span></div></footer></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script></body></html><!-- rebuild by neat -->
