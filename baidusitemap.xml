@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chenzhonzhou.github.io/2019/12/13/hexo-next-dai-ma-kuai-fu-zhi-gong-neng/</loc>
+    <lastmod>2021-09-13</lastmod>
+  </url>
+  <url>
     <loc>http://chenzhonzhou.github.io/2021/09/07/mysql-shi-yong-mysqlbinlog-la-qu-binlog-ri-zhi/</loc>
     <lastmod>2021-09-12</lastmod>
   </url>
