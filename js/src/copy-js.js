@@ -1,3 +1,3 @@
-// build time:Mon Sep 13 2021 15:39:31 GMT+0800 (GMT+08:00)
+// build time:Tue Sep 14 2021 14:52:53 GMT+0800 (GMT+08:00)
 function copy_code(){$(".highlight").each(function(t,e){var n=$("<div>").addClass("highlight-wrap");$(e).after(n);n.append($("<button>").addClass("copy-btn").append("复制").on("click",function(t){var e=$(this).parent().find(".code").find(".line").map(function(t,e){return $(e).text()}).toArray().join("\n");var n=document.createElement("textarea");document.body.appendChild(n);n.style.position="absolute";n.style.top="0px";n.style.left="0px";n.value=e;n.select();n.focus();var o=document.execCommand("copy");document.body.removeChild(n);if(o)$(this).text("复制成功");else $(this).text("复制失败");$(this).blur()})).on("mouseleave",function(t){var e=$(this).find(".copy-btn");setTimeout(function(){e.text("复制")},300)}).append(e)})}
 //rebuild by neat 
