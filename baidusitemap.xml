@@ -1,11 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://chenzhonzhou.github.io/2021/09/27/hexo-next-zhu-ti-ye-mian-liang-ce-kong-bai-wen-ti/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <loc>http://chenzhonzhou.github.io/2021/11/16/presto-fen-bu-shi-sql-cha-xun-yin-qing/</loc>
+    <lastmod>2021-12-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/12/11/alluxio-fen-bu-shi-nei-cun-wen-jian-xi-tong/</loc>
+    <lastmod>2021-12-14</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/24/apache-druid-lian-ji-fen-xi-chu-li-olap/</loc>
+    <lastmod>2021-12-09</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/12/07/apache-doris-lian-ji-fen-xi-chu-li-olap/</loc>
+    <lastmod>2021-12-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/12/07/apache-doris-he-clickhouse-shen-du-dui-bi/</loc>
+    <lastmod>2021-12-07</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/12/02/superset-yi-kuan-qing-liang-ji-bi-gong-ju/</loc>
+    <lastmod>2021-12-03</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2018/09/01/yum-an-zhuang-docker/</loc>
+    <lastmod>2021-12-02</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/01/hadoop-liu-shi-ji-suan-yin-qing-storm/</loc>
+    <lastmod>2021-12-02</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/30/olap-ru-he-xuan-xing/</loc>
+    <lastmod>2021-12-01</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/21/hadoop-fen-bu-shi-shu-ju-cang-ku-hive/</loc>
+    <lastmod>2021-12-01</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/19/clickhouse-lian-ji-fen-xi-chu-li-olap/</loc>
+    <lastmod>2021-11-30</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2018/08/11/yum-an-zhuang-mysql-5-7/</loc>
+    <lastmod>2021-11-18</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/16/da-shu-ju-zhu-liu-liu-ji-suan-flink-ji-storm-spark-bi-jiao/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/16/flink-chang-yong-de-ji-chong-mo-shi-bu-shu/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/12/hadoop-ji-suan-yin-qing-flink/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/11/spark-chang-yong-de-ji-chong-mo-shi-bu-shu/</loc>
+    <lastmod>2021-11-11</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/11/04/hadoop-ji-suan-yin-qing-spark/</loc>
+    <lastmod>2021-11-11</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/07/hadoop-2-7-2-shou-dong-bu-shu/</loc>
+    <lastmod>2021-11-09</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/18/hadoop-nosql-shu-ju-ku-hbase/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/28/hive-ql-chang-yong-cao-zuo/</loc>
+    <lastmod>2021-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/27/hive-quan-xian-guan-li/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/26/hive-metastore-he-hiveserver2-de-gao-ke-yong-pei-zhi/</loc>
+    <lastmod>2021-10-28</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/26/hive-de-san-chong-lian-jie-fang-shi/</loc>
+    <lastmod>2021-10-26</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2021/09/26/hadoop-gai-shu/</loc>
+    <lastmod>2021-10-22</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/04/09/fluentd-ti-qu-ri-zhi-ji-bie-level-zuo-wei-xin-zi-duan/</loc>
+    <lastmod>2021-10-20</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/12/hadoop-hdfs-ji-yu-zk-de-gao-ke-yong-pei-zhi/</loc>
+    <lastmod>2021-10-18</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/15/hadoop-shell-chang-yong-ming-ling/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/06/hadoop-fen-bu-shi-wen-jian-xi-tong-hdfs/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/10/13/ambari-bu-shu-hadoop-da-shu-ju-ji-qun/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2017/08/26/mysql-chang-yong-ming-ling/</loc>
+    <lastmod>2021-10-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/09/27/hexo-next-zhu-ti-ye-mian-liang-ce-kong-bai-wen-ti/</loc>
     <lastmod>2021-09-27</lastmod>
   </url>
   <url>
@@ -26,10 +142,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2019/09/10/mysql-shan-hui-gong-ju-binlog2sql-an-zhuang-ji-shi-yong/</loc>
-    <lastmod>2021-09-10</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2017/08/26/mysql-chang-yong-ming-ling/</loc>
     <lastmod>2021-09-10</lastmod>
   </url>
   <url>
@@ -107,10 +219,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2019/05/08/k8s-pod-de-evicted-zhuang-tai-chu-li/</loc>
     <lastmod>2021-04-13</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2021/04/09/fluentd-ti-qu-ri-zhi-ji-bie-level-zuo-wei-xin-zi-duan/</loc>
-    <lastmod>2021-04-12</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2021/03/18/fluentd-cai-ji-ri-zhi-chao-chu-docker-rong-qi-16k-xian-zhi-huan-xing-wen-ti/</loc>
@@ -299,10 +407,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/12/apollo-ji-cheng-openldap/</loc>
     <lastmod>2020-11-12</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2018/09/01/yum-an-zhuang-docker/</loc>
-    <lastmod>2020-11-11</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/11/yapi-ji-cheng-openldap/</loc>
