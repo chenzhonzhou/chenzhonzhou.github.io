@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chenzhonzhou.github.io/2017/06/05/docker-chang-yong-ming-ling/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/03/09/linux-sheng-ji-nei-he-ban-ben/</loc>
+    <lastmod>2022-03-09</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2017/03/08/supervisor-jin-cheng-guan-li/</loc>
+    <lastmod>2022-03-07</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/05/08/k8s-zhong-chong-qi-pod-de-ji-chong-fang-fa/</loc>
+    <lastmod>2022-02-24</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/08/11/aws-eks-zhong-pod-gua-zai-wai-bu-cun-chu-de-fang-shi/</loc>
+    <lastmod>2022-02-07</lastmod>
+  </url>
+  <url>
     <loc>http://chenzhonzhou.github.io/2018/07/28/redis-chang-yong-ming-ling/</loc>
     <lastmod>2022-01-14</lastmod>
   </url>
@@ -1175,10 +1195,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2019/11/02/softether-vpn-client-windows-shi-yong-jiao-cheng/</loc>
     <lastmod>2019-11-09</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2017/03/08/supervisor-jin-cheng-guan-li/</loc>
-    <lastmod>2019-11-08</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2018/07/12/shadowsocks-shi-yong-kcptun-jia-su/</loc>
