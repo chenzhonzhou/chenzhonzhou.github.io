@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://chenzhonzhou.github.io/2017/06/05/docker-chang-yong-ming-ling/</loc>
-    <lastmod>2022-03-16</lastmod>
+    <loc>http://chenzhonzhou.github.io/2017/08/15/bu-shu-zhu-cong-dns/</loc>
+    <lastmod>2022-04-24</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2020/07/22/mysql-shu-ju-ku-biao-kong-jian-da-xiao-jian-kong/</loc>
+    <lastmod>2022-04-14</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2017/08/26/mysql-chang-yong-ming-ling/</loc>
+    <lastmod>2022-04-14</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/04/08/gitlab-ban-ben-sheng-ji/</loc>
+    <lastmod>2022-04-14</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/02/16/k8s-helm-bu-shu-he-shi-yong/</loc>
+    <lastmod>2022-03-22</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2022/03/09/linux-sheng-ji-nei-he-ban-ben/</loc>
-    <lastmod>2022-03-09</lastmod>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2017/06/05/docker-chang-yong-ming-ling/</loc>
+    <lastmod>2022-03-16</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2017/03/08/supervisor-jin-cheng-guan-li/</loc>
@@ -155,10 +175,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2021/10/15/hadoop-shell-chang-yong-ming-ling/</loc>
     <lastmod>2021-10-15</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2017/08/26/mysql-chang-yong-ming-ling/</loc>
-    <lastmod>2021-10-08</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2021/09/27/hexo-next-zhu-ti-ye-mian-liang-ce-kong-bai-wen-ti/</loc>
@@ -507,10 +523,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2020/08/07/tcpdump-yu-wireshark-zhua-bao-fen-xi/</loc>
     <lastmod>2020-08-07</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2020/07/22/mysql-shu-ju-ku-biao-kong-jian-da-xiao-jian-kong/</loc>
-    <lastmod>2020-07-22</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2019/03/01/prometheus-grafana-node-export-bu-shu/</loc>
@@ -1262,10 +1274,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2019/07/12/fluentd-fluentd-bit-zai-k8s-zhong-de-ri-zhi-cai-ji/</loc>
-    <lastmod>2019-11-01</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2017/08/15/bu-shu-zhu-cong-dns/</loc>
     <lastmod>2019-11-01</lastmod>
   </url>
   <url>
