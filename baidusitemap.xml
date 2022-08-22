@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chenzhonzhou.github.io/2020/10/22/grafana-ji-cheng-openldap-tong-yi-zhang-hu-ren-zheng/</loc>
+    <lastmod>2022-08-22</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/08/22/grafana-shi-yong-ssl-jia-mi-ji-cheng-openldap/</loc>
+    <lastmod>2022-08-22</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2020/11/06/jumpserver-bao-lei-ji-ji-cheng-openldap/</loc>
+    <lastmod>2022-08-18</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/08/17/openldap-kai-qi-ssl-tls-jia-mi-tong-xin/</loc>
+    <lastmod>2022-08-18</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/08/03/k8s-zhong-yun-xing-openldap/</loc>
+    <lastmod>2022-08-04</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2018/10/30/kubernetes-chang-yong-ming-ling/</loc>
+    <lastmod>2022-07-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/06/28/k8s-rong-qi-poddisruptionbudget-zhu-dong-qu-zhu-bao-hu/</loc>
+    <lastmod>2022-06-29</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/06/28/k8s-zhong-yun-xing-zookeeper/</loc>
+    <lastmod>2022-06-28</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/04/08/gitlab-ban-ben-sheng-ji/</loc>
+    <lastmod>2022-06-22</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2021/06/28/k8s-ingress-pei-zhi-hei-bai-ming-dan/</loc>
+    <lastmod>2022-05-07</lastmod>
+  </url>
+  <url>
     <loc>http://chenzhonzhou.github.io/2017/08/15/bu-shu-zhu-cong-dns/</loc>
     <lastmod>2022-04-24</lastmod>
   </url>
@@ -10,10 +50,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2017/08/26/mysql-chang-yong-ming-ling/</loc>
-    <lastmod>2022-04-14</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2022/04/08/gitlab-ban-ben-sheng-ji/</loc>
     <lastmod>2022-04-14</lastmod>
   </url>
   <url>
@@ -257,10 +293,6 @@
     <lastmod>2021-07-08</lastmod>
   </url>
   <url>
-    <loc>http://chenzhonzhou.github.io/2021/06/28/k8s-ingress-pei-zhi-hei-bai-ming-dan/</loc>
-    <lastmod>2021-07-01</lastmod>
-  </url>
-  <url>
     <loc>http://chenzhonzhou.github.io/2019/03/12/grafana-mian-ban-shi-yong-ji-qiao/</loc>
     <lastmod>2021-06-17</lastmod>
   </url>
@@ -409,10 +441,6 @@
     <lastmod>2020-12-08</lastmod>
   </url>
   <url>
-    <loc>http://chenzhonzhou.github.io/2020/10/22/grafana-ji-cheng-openldap-tong-yi-zhang-hu-ren-zheng/</loc>
-    <lastmod>2020-12-03</lastmod>
-  </url>
-  <url>
     <loc>http://chenzhonzhou.github.io/2020/11/03/openldap-yum-an-zhuang/</loc>
     <lastmod>2020-12-02</lastmod>
   </url>
@@ -475,10 +503,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/09/zabbix-ji-cheng-openldap/</loc>
     <lastmod>2020-11-09</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2020/11/06/jumpserver-bao-lei-ji-ji-cheng-openldap/</loc>
-    <lastmod>2020-11-06</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/04/nginx-ji-cheng-openldap/</loc>
@@ -618,10 +642,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2017/02/26/nginx-ri-zhi-tong-ji-fen-xi-chang-yong-ming-ling/</loc>
-    <lastmod>2020-04-15</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2018/10/30/kubernetes-chang-yong-ming-ling/</loc>
     <lastmod>2020-04-15</lastmod>
   </url>
   <url>
