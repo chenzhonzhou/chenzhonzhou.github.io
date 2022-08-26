@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://chenzhonzhou.github.io/2022/08/17/openldap-kai-qi-ssl-tls-jia-mi-tong-xin/</loc>
-    <lastmod>2022-08-22</lastmod>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/08/03/k8s-zhong-yun-xing-openldap/</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2020/11/06/openldap-shu-ju-bei-fen-yu-hui-fu/</loc>
+    <lastmod>2022-08-25</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2020/10/22/grafana-ji-cheng-openldap-tong-yi-zhang-hu-ren-zheng/</loc>
@@ -15,10 +23,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/06/jumpserver-bao-lei-ji-ji-cheng-openldap/</loc>
     <lastmod>2022-08-18</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2022/08/03/k8s-zhong-yun-xing-openldap/</loc>
-    <lastmod>2022-08-04</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2018/10/30/kubernetes-chang-yong-ming-ling/</loc>
@@ -354,10 +358,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2020/11/02/openldap-pei-zhi-yong-hu-zi-zhu-xiu-gai-mi-ma/</loc>
-    <lastmod>2021-01-14</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2020/11/06/openldap-bei-fen-yu-hui-fu/</loc>
     <lastmod>2021-01-14</lastmod>
   </url>
   <url>
