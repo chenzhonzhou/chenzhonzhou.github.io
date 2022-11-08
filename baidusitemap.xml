@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chenzhonzhou.github.io/2022/11/30/go-jie-gou-ti-he-liu-cheng-kong-zhi/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/10/15/go-shu-ju-lei-xing/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/10/11/go-yu-yan-ji-chu/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/10/05/go-bu-tong-ping-tai-xia-jiao-cha-bian-yi-fang-shi/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2016/06/05/git-chang-yong-ming-ling/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/09/29/go-chang-yong-ming-ling/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/09/28/go-huan-jing-an-zhuang/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2016/12/24/keepalived-bu-shu/</loc>
+    <lastmod>2022-11-08</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2018/12/13/rsync-sersync-shi-shi-tong-bu/</loc>
+    <lastmod>2022-09-17</lastmod>
+  </url>
+  <url>
+    <loc>http://chenzhonzhou.github.io/2022/08/26/elasticsearch-ji-cheng-openldap/</loc>
+    <lastmod>2022-09-06</lastmod>
+  </url>
+  <url>
     <loc>http://chenzhonzhou.github.io/2022/08/17/openldap-kai-qi-ssl-tls-jia-mi-tong-xin/</loc>
     <lastmod>2022-08-25</lastmod>
   </url>
@@ -342,10 +382,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2017/07/16/git-cang-ku-qian-yi/</loc>
-    <lastmod>2021-01-19</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2016/06/05/git-chang-yong-ming-ling/</loc>
     <lastmod>2021-01-19</lastmod>
   </url>
   <url>
@@ -1249,10 +1285,6 @@
     <lastmod>2019-11-06</lastmod>
   </url>
   <url>
-    <loc>http://chenzhonzhou.github.io/2018/12/13/rsync-sersync-shi-shi-tong-bu/</loc>
-    <lastmod>2019-11-06</lastmod>
-  </url>
-  <url>
     <loc>http://chenzhonzhou.github.io/2019/04/09/prometheus-bu-shu-you-xiang-gao-jing-qi-ye-wei-xin-gao-jing-ding-ding-gao-jing/</loc>
     <lastmod>2019-11-06</lastmod>
   </url>
@@ -1263,10 +1295,6 @@
   <url>
     <loc>http://chenzhonzhou.github.io/2017/10/13/openvpn-2.3.4-bu-shu-chuang-jian-pei-zhi-ke-hu-duan-zheng-shu/</loc>
     <lastmod>2019-11-05</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2016/12/24/keepalived-bu-shu/</loc>
-    <lastmod>2019-11-04</lastmod>
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2018/03/24/jumpserver-bao-lei-ji-bu-shu/</loc>
