@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chenzhonzhou.github.io/2023/02/26/go-init-han-shu-zhi-xing-shun-xu/</loc>
+    <lastmod>2023-12-03</lastmod>
+  </url>
+  <url>
     <loc>http://chenzhonzhou.github.io/2023/07/20/go-xu-lie-hua-he-fan-xu-lie-hua/</loc>
     <lastmod>2023-12-03</lastmod>
   </url>
@@ -10,10 +14,6 @@
   </url>
   <url>
     <loc>http://chenzhonzhou.github.io/2023/06/08/go-shi-yong-toml-pei-zhi-wen-jian/</loc>
-    <lastmod>2023-12-02</lastmod>
-  </url>
-  <url>
-    <loc>http://chenzhonzhou.github.io/2023/02/26/go-init-han-shu-zhi-xing-shun-xu/</loc>
     <lastmod>2023-12-02</lastmod>
   </url>
   <url>
